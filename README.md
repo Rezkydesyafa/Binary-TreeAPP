@@ -9,7 +9,7 @@ Aplikasi desktop yang interaktif dan intuitif, dibuat dengan **Java Swing**, unt
 
 ---
 
-## ✨ Fitur Utama
+## Fitur Utama
 
 * **Visualisasi Real-time**: Lihat struktur pohon tergambar secara otomatis saat Anda menambah, menghapus, atau mengubah data.
 * **Operasi Tree Lengkap**: Lakukan semua operasi dasar BST: `Insert`, `Delete`, `Search`, dan `Update` melalui antarmuka grafis.
@@ -21,7 +21,7 @@ Aplikasi desktop yang interaktif dan intuitif, dibuat dengan **Java Swing**, unt
 
 ---
 
-## 🛠️ Teknologi & Kebutuhan Sistem
+## Teknologi & Kebutuhan Sistem
 
 * **Bahasa Pemrograman**: **Java**
 * **Framework UI**: **Java Swing**
@@ -86,15 +86,3 @@ Aplikasi ini dirancang dengan prinsip **Separation of Concerns** menggunakan pol
 > └── gui/          # View & Controller: Antarmuka dan event (TreeGUI.java, TreePanel.java)
 > ```
 
----
-
-## 🤔 Troubleshooting
-
-| Masalah                       | Solusi                                                                 |
-| ----------------------------- | ---------------------------------------------------------------------- |
-| Error "Invalid number format" | Pastikan nilai yang Anda masukkan sesuai dengan tipe data yang dipilih. |
-| Operasi `Update` tidak bekerja | Pastikan format input adalah `nilaiLama,nilaiBaru` tanpa spasi.        |
-| Tampilan pohon kacau          | Klik tombol `Clear` untuk mereset tampilan dan mulai dari awal.        |
-| Error `Char must be...`       | Untuk tipe data `Char`, masukkan hanya satu karakter.                  |
-
----
