@@ -86,3 +86,51 @@ Aplikasi ini dirancang dengan prinsip **Separation of Concerns** menggunakan pol
 > └── gui/          # View & Controller: Antarmuka dan event (TreeGUI.java, TreePanel.java)
 > ```
 
+
+
+## Struktur Program
+
+| File               | Deskripsi                                            |
+|--------------------|------------------------------------------------------|
+| `Node.java`        | Struktur dasar node pohon (data, kiri, kanan)        |
+| `BinaryTree.java`  | Logika utama pohon biner: tambah, hapus, traversal   |
+| `TreePanel.java`   | Panel khusus untuk menggambar visualisasi pohon      |
+| `TreeGUI.java`     | Antarmuka utama pengguna dan penghubung ke logika    |
+
+---
+
+## Cara Kerja
+
+### 1. Logika Pohon Biner (`BinaryTree.java`)
+
+Menggunakan prinsip **Binary Search Tree (BST)**:
+- **Tambah node** ke kiri jika lebih kecil, ke kanan jika lebih besar.
+- **Hapus node** dengan menangani 3 kondisi: tanpa anak, satu anak, dua anak.
+- **Traversal** (penelusuran) dilakukan secara rekursif:
+  - Inorder (Kiri → Akar → Kanan)
+  - Preorder (Akar → Kiri → Kanan)
+  - Postorder (Kiri → Kanan → Akar)
+
+### 2. Representasi Node (`Node.java`)
+
+Setiap simpul memiliki:
+- Tipe data `Comparable` agar bisa dibandingkan
+- Referensi ke anak kiri dan kanan
+
+### 3. Visualisasi Grafis (`TreePanel.java`)
+
+Komponen `JPanel` khusus untuk:
+- Menggambar pohon secara rekursif dari akar
+- Mengatur posisi node secara proporsional
+- Menggunakan `Graphics2D` untuk menggambar garis dan lingkaran node
+
+### 4. Antarmuka Pengguna (`TreeGUI.java`)
+
+Dibuat dengan komponen `Swing`, terdiri dari:
+- `JTextField` untuk input nilai node
+- `JButton` untuk aksi (tambah, hapus, clear)
+- `JComboBox` untuk memilih metode traversal
+- Panel visual untuk menampilkan pohon
+- Event listener yang merespons input pengguna dan memanggil `repaint()`
+
+---
